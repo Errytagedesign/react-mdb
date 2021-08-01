@@ -1,6 +1,11 @@
 import React from 'react';
 
 
+// components
+
+import Header from './components/header';
+
+
 // styles
 
 import {GlobalStyle} from './GlobalStyle';
@@ -8,8 +13,11 @@ import {GlobalStyle} from './GlobalStyle';
 function App() {
   return (
     <div className="App">
+
+      <Header />
       Start here.
-     <GlobalStyle />
+      <GlobalStyle />
+
     </div>
   );
 }
