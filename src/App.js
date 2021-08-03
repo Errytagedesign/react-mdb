@@ -5,6 +5,8 @@ import React from 'react';
 
 import Header from './components/header';
 
+import Home from './components/Home';
+
 
 // styles
 
@@ -15,7 +17,9 @@ function App() {
     <div className="App">
 
       <Header />
-      Start here.
+
+      <Home />      
+
       <GlobalStyle />
 
     </div>
