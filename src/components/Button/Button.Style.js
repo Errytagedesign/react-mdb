@@ -1,21 +1,23 @@
-import { ButtonGroup } from "react-bootstrap";
 import styled from "styled-components";
 
-export const Wrapper = styled(ButtonGroup)`
-  max-width: var(--maxwidth);
-  margin: 0 auto;
-  padding: 0 1.5em;
+export const Wrapper = styled.button`
+display: block;
+  width: 40%;
+  min-width: 200px;
+  margin: 15px auto;
+  padding: 1.5em;
+  background: var(--darkGrey);
+  border-radius: 25px;
+  font-size: var(--fontBig)
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
 
-  h1 {
-    color: var(--medGrey);
-
-    @media screen and (max-width: 768px) {
-      font-size: var(--fontBig);
-    }
+  :hover{
+    opacity: 0.8;
   }
-`;
-export const Content = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 2rem;
+
+  
+    color: var(--white);
+
 `;
