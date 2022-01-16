@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // config import
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from "../config";
@@ -41,15 +41,16 @@ const Home = () => {
       <SearchBar setSearchTerm={setSearchTerm} />
 
       <MovieGrid header={searchTerm ? "Search Results" : "Popular Movies"}>
-        {state.results.map((movie) => (
+        {state.results.map((movie, index) => (
           <Thumb
-            key={movie.id}
+            key={index}
             clickable={true}
             image={
               movie.poster_path
                 ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path
                 : NoImage
             }
+            movieId={movie.id}
           />
         ))}
       </MovieGrid>

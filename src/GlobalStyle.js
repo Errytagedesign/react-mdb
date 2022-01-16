@@ -24,7 +24,8 @@ export const GlobalStyle = createGlobalStyle`
     --webkit-box-sizing: border-box;
     --moz-box-sizing: border-box;
         box-sizing: border-box;
-    font-famliy: 'Abel', sans-serif;
+    font-family: 'Abel', sans-serif;
+    
 
 }
 
@@ -32,6 +33,7 @@ body{
 
     margin: 0;
     padding: 0;
+   
 
     h1{
 
