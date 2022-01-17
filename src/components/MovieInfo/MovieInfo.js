@@ -4,7 +4,7 @@ import React from "react";
 import Thumb from "../Thumb/Thumb";
 
 // config
-import { IMAGE_BASE_URL, POSTER_SIZE, TOOLIP_SIZE } from "../../config";
+import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 
 // Image
 import NoImage from "../../images/no_image.jpg";
@@ -63,7 +63,7 @@ function MovieInfo({ movie }) {
                 ))}
               </article>
             </section>
-            <section>
+            {/* <section>
               <article>
                 <h3>ACTORS</h3>
                 <div className="actors ">
@@ -85,7 +85,7 @@ function MovieInfo({ movie }) {
                   <div></div>
                 </div>
               </article>
-            </section>
+            </section> */}
           </Text>
         </Content>
       </Wrapper>

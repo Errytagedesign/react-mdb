@@ -9,6 +9,8 @@ import Grid from "./Grid/MovieGrid";
 import Breadcrumb from "./BreadCrumb/Breadcrumb";
 import Spinner from "./Spinner/Spinner";
 import MovieInfo from "./MovieInfo/MovieInfo";
+import MovieInfoBar from "./MovieInfoBar/MovieInfoBar";
+import Actors from "./Actors/Actor";
 
 // Image
 import NoImage from "../images/no_image.jpg";
@@ -27,6 +29,25 @@ function Movie() {
     <div>
       <Breadcrumb movieTitle={currentMovie.original_title} />
       <MovieInfo movie={currentMovie} />
+      <MovieInfoBar
+        time={currentMovie.runtime}
+        budget={currentMovie.budget}
+        revenue={currentMovie.revenue}
+      />
+      <Grid header="Actors">
+        {currentMovie.actors.map((actor) => (
+          <Actors
+            key={actor.credit_id}
+            name={actor.name}
+            character={actor.character}
+            imageUrl={
+              actor.profile_path
+                ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
+                : NoImage
+            }
+          />
+        ))}
+      </Grid>
     </div>
   );
 }
