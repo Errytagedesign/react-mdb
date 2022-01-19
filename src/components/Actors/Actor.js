@@ -5,9 +5,12 @@ function Actor({ name, character, imageUrl }) {
   return (
     <div>
       <Wrapper>
-        <Image src={imageUrl} />
+        <Image src={imageUrl} alt="Actor-thumbnails" />
         <h3>{name}</h3>
-        <p>{character} </p>
+        <div className="overlay">
+          <p>Character Name:</p>
+          <h3>{character} </h3>
+        </div>
       </Wrapper>
     </div>
   );
